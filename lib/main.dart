@@ -1,9 +1,13 @@
-import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
 
+import 'FourthWidget.dart';
 import 'ListMessages.dart';
+import 'SecondWidget.dart';
+import 'ThirdWidget.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -14,12 +18,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
         debugShowCheckedModeBanner: false,
+        theme: ThemeData(primaryColor: Colors.purple),
         home: DefaultTabController(
           length: 4,
           child: new Scaffold(
-              backgroundColor: Colors.purple[100],
+              backgroundColor: Colors.white,
               appBar: _myAppbar(),
-              bottomNavigationBar: BottomNavigationBar(items: [
+              bottomNavigationBar: BottomNavigationBar(
+
+                items: [
               new BottomNavigationBarItem(
               icon: Container(
                 padding: EdgeInsets.only(right: 90, top: 10),
@@ -39,17 +46,26 @@ class MyApp extends StatelessWidget {
                 ),
               ]
                   ,
-                backgroundColor:  Colors.grey.withOpacity(0.4),
+                backgroundColor:  Colors.purple.withOpacity(0.4),
               ),
 
-          body: new Messages(),
+          body:TabBarView(
+    children: [
+
+      FriendlychatApp(),
+      ThirdScreen(),
+      FourthScreen(),
+      new Messages(),
+
+    ],
+          )
         )
     ));
   }
 
   AppBar _myAppbar() {
     return new AppBar(
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.purple[800],
         flexibleSpace: new Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
