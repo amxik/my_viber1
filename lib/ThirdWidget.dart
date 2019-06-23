@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'entity/ContactRow.dart';
+import 'entity/User.dart';
+
 class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,93 +91,9 @@ class ThirdScreen extends StatelessWidget {
             child: new Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    Stack(children: <Widget>[
-                      new Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.all(Radius.circular(40)),
-                        ),
-                      ),
-                      Positioned(
-                        height: 170,
-                        width: 180,
-                        child: new Icon(
-                          Icons.phone_in_talk,
-                          color: Colors.purple,
-                        ),
-                      )
-                    ]),
-                    new Container(
-                        child: new Text('Maxym Niskov')
-                    )
-                  ],
-
-                ),
-                Column(
-                  children: <Widget>[
-                    Stack(children: <Widget>[
-                      new Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.all(Radius.circular(40)),
-                        ),
-                      ),
-                      Positioned(
-                        height: 170,
-                        width: 180,
-                        child: new Icon(
-                          Icons.phone_in_talk,
-                          color: Colors.purple,
-                        ),
-                      )
-                    ]),
-                    new Container(
-                        child: new Text('Maxym Niskov')
-                    )
-                  ],
-
-                ),
-                Column(
-                  children: <Widget>[
-                    Stack(children: <Widget>[
-                      new Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.all(Radius.circular(40)),
-                        ),
-                      ),
-                      Positioned(
-                        height: 170,
-                        width: 180,
-                        child: new Icon(
-                          Icons.phone_in_talk,
-                          color: Colors.purple,
-                        ),
-                      )
-                    ]),
-                    new Container(
-                        child: new Text('Maxym Niskov')
-                    )
-                  ],
-
-                ),
+                new Contact('https://klike.net/uploads/posts/2019-03/1551511801_1.jpg','Maxym Niskov'),
+                new Contact('https://klike.net/uploads/posts/2019-03/1551511823_2.jpg','Maxym Niskov'),
+                new Contact('https://klike.net/uploads/posts/2019-03/1551511823_2.jpg','Maxym Niskov'),
               ],
             ),
           ),
@@ -183,96 +102,13 @@ class ThirdScreen extends StatelessWidget {
             child: new Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    Stack(children: <Widget>[
-                      new Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.all(Radius.circular(40)),
-                        ),
-                      ),
-                      Positioned(
-                        height: 170,
-                        width: 180,
-                        child: new Icon(
-                          Icons.phone_in_talk,
-                          color: Colors.purple,
-                        ),
-                      )
-                    ]),
-                    new Container(
-                        child: new Text('Maxym Niskov')
-                    )
-                  ],
-
-                ),
-                Column(
-                  children: <Widget>[
-                    Stack(children: <Widget>[
-                      new Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.all(Radius.circular(40)),
-                        ),
-                      ),
-                      Positioned(
-                        height: 170,
-                        width: 180,
-                        child: new Icon(
-                          Icons.phone_in_talk,
-                          color: Colors.purple,
-                        ),
-                      )
-                    ]),
-                    new Container(
-                        child: new Text('Maxym Niskov')
-                    )
-                  ],
-
-                ),
-                Column(
-                  children: <Widget>[
-                    Stack(children: <Widget>[
-                      new Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.all(Radius.circular(40)),
-                        ),
-                      ),
-                      Positioned(
-                        height: 170,
-                        width: 180,
-                        child: new Icon(
-                          Icons.phone_in_talk,
-                          color: Colors.purple,
-                        ),
-                      )
-                    ]),
-                    new Container(
-                        child: new Text('Maxym Niskov')
-                    )
-                  ],
-
-                ),
+                new Contact('https://klike.net/uploads/posts/2019-03/1551511823_2.jpg','Maxym Niskov'),
+                new Contact('https://klike.net/uploads/posts/2019-03/1551511823_2.jpg','Maxym Niskov'),
+                new Contact('https://klike.net/uploads/posts/2019-03/1551511801_1.jpg','Maxym Niskov'),
               ],
             ),
           ),
+
           Container(
             padding: EdgeInsets.only(top: 25, left: 10, right: 10),
             child: new Column(
@@ -339,133 +175,16 @@ class ThirdScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                new Container(
-
-                  child: new Row(
-                    children: <Widget>[
-                      new Container(
-                        padding: EdgeInsets.only(left: 10),
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.all(Radius.circular(15)),
-                        ),
-                      ),
-                      new Container(
-                        padding: EdgeInsets.only(left: 15),
-                        child: new Text(
-                          'Ashley Jackson',
-                          style: TextStyle(color: Colors.black, fontSize: 20),
-                        ),
-                      ),
-                      Expanded(
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                            new IconButton(
-                                icon: Icon(
-                                  Icons.phone_in_talk,
-                                  color: Colors.purple,
-                                ),
-                                onPressed: () {})
-                          ]))
-                    ],
-                  ),
-                )
               ],
             ),
           ),
-
-          new Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-           child: new Column(children: <Widget>[
-             new Divider(),
-             new Container(
-               child: new Row(
-                 children: <Widget>[
-                   new Container(
-                     padding: EdgeInsets.only(left: 10),
-                     width: 40,
-                     height: 40,
-                     decoration: BoxDecoration(
-                       image: DecorationImage(
-                           image: NetworkImage(
-                               'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'),
-                           fit: BoxFit.cover),
-                       borderRadius: BorderRadius.all(Radius.circular(15)),
-                     ),
-                   ),
-                   new Container(
-                     padding: EdgeInsets.only(left: 15),
-                     child: new Text(
-                       'Ashley Jackson',
-                       style: TextStyle(color: Colors.black, fontSize: 20),
-                     ),
-                   ),
-                   Expanded(
-                       child: Row(
-                           mainAxisAlignment: MainAxisAlignment.end,
-                           children: <Widget>[
-                             new IconButton(
-                                 icon: Icon(
-                                   Icons.phone_in_talk,
-                                   color: Colors.purple,
-                                 ),
-                                 onPressed: () {})
-                           ]))
-                 ],
-               ),
-             )
-
-           ],)
-          ),
-          new Container(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: new Column(children: <Widget>[
-                new Divider(),
-                new Container(
-                  child: new Row(
-                    children: <Widget>[
-                      new Container(
-                        padding: EdgeInsets.only(left: 10),
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.all(Radius.circular(15)),
-                        ),
-                      ),
-                      new Container(
-                        padding: EdgeInsets.only(left: 15),
-                        child: new Text(
-                          'Ashley Jackson',
-                          style: TextStyle(color: Colors.black, fontSize: 20),
-                        ),
-                      ),
-                      Expanded(
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                new IconButton(
-                                    icon: Icon(
-                                      Icons.phone_in_talk,
-                                      color: Colors.purple,
-                                    ),
-                                    onPressed: () {})
-                              ]))
-                    ],
-                  ),
-                )
-
-              ],)
-          )
+          new ContactRow( 'https://klike.net/uploads/posts/2019-03/1551511801_1.jpg' ,'Ashley Jackson'),
+          new ContactRow( 'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg' ,'Ashley Jackson'),
+          new ContactRow( 'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg' ,'Ashley Jackson'),
+          new ContactRow( 'https://klike.net/uploads/posts/2019-03/1551511801_1.jpg' ,'Ashley Jackson'),
+          new ContactRow( 'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg' ,'Ashley Jackson'),
+          new ContactRow( 'https://klike.net/uploads/posts/2019-03/1551511801_1.jpg' ,'Ashley Jackson'),
+          new ContactRow( 'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg' ,'Ashley Jackson'),
         ],
       )),
     );
